@@ -35,7 +35,7 @@ def create_project_hash
   project_list = kickstarter.css("li.project.grid_4")
 
   #scrape for project info and add to hash
-  projects = {}
+  projects = {} #These individual project hashes will be collected into a this larger hash called projects.
   project_list.each do |project|
     title = project.css("h2.bbcard_name strong a").text
     projects[title.to_sym] = {
